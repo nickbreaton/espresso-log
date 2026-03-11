@@ -1,0 +1,18 @@
+---
+import { getSecret } from "astro:env/server";
+
+const response = await fetch(getSecret("ESPRESSO_URI")!, {
+  headers: {
+    "CF-Access-Client-Id": getSecret("ESPRESSO_CLIENT_ID")!,
+    "CF-Access-Client-Secret": getSecret("ESPRESSO_CLIENT_SECRET")!,
+  },
+});
+
+const data = await response.json();
+---
+
+<html>
+  <body>
+    <pre>{JSON.stringify(data, null, 2)}</pre>
+  </body>
+</html>
