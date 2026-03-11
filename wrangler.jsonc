@@ -2,5 +2,5 @@
   "name": "espresso",
   "compatibility_date": "2025-01-01",
   "workers_dev": false,
-  "routes": [{ "pattern": "nickbreaton.com/espresso" }],
+  "routes": [{ "pattern": "nickbreaton.com/espresso*" }],
 }
